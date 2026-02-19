@@ -10,7 +10,8 @@ app.set('view engine', 'ejs');
 
 
 //routes
-app.get('/', (req, res) => res.send("test"));
+const indexRouter = require("./routes/indexRouter");
+app.use('/', indexRouter);
 
 
 
