@@ -17,10 +17,9 @@ const messages = [
 ];
 
 
-indexRouter.get("/", (req, res) => res.send("All indexs"));
+indexRouter.get("/", (req, res) => res.render("index", { messages: messages }));
 indexRouter.get("/:indexId", (req, res) => {
-  const { indexId } = req.params;
-  res.send(`index ID: ${indexId}`);
+    res.render("index", { links: links });
 });
 
 module.exports = indexRouter;
