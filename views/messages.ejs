@@ -1,0 +1,10 @@
+<% if(messages && messages.length > 0) { %>
+    <% messages.forEach(message => { %>
+        <div class="message">
+            <h1> <%=message.user%> </h1>
+            <h2> <%=message.added%> </h2>
+            <p> <%=message.text%> </p>
+            <a href="/messages?id=<%=message.id%>"><button type="button">View MSG</button></a>
+        </div>
+    <% }) %>
+<% } %>
