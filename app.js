@@ -7,7 +7,7 @@ const path = require('node:path');
 //ejs config
 app.set('VIEWS', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(express.urlencoded({ extended: true }));
 
 //routes
 const indexRouter = require("./routes/indexRouter");
